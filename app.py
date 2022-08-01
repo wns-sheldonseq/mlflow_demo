@@ -25,8 +25,9 @@ app = Flask(__name__)
 # model = pickle.load(open('models/model.pkl', 'rb'))
 
 
-logged_model = 'wasbs://artifacts@wnsmlopstrgci.blob.core.windows.net/17/e11ebe5dacae409caebd369b383c9c35/artifacts/model'
-
+#logged_model = 'wasbs://artifacts@wnsmlopstrgci.blob.core.windows.net/17/e11ebe5dacae409caebd369b383c9c35/artifacts/model'
+#logged_model = 'dbfs:/databricks/mlflow-tracking/4281740375320786/bbddcbfa62ff4c5ba472415ba944b37c/artifacts/model'
+logged_model ='runs:/bbddcbfa62ff4c5ba472415ba944b37c/model'
 
 # Load model as a PyFuncModel.
 model = mlflow.pyfunc.load_model(logged_model)
